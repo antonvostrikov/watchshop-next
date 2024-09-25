@@ -1,13 +1,13 @@
 import cn from 'classnames'
 
 interface IContainerProps {
-  classNames?: string
+  className?: string
   children?: React.ReactNode
 }
 
-const Container:React.FC<IContainerProps> = ({ classNames, children }) => {
+const Container:React.FC<IContainerProps> = ({ className, children }) => {
   return (
-    <div className={cn('container', classNames)}>
+    <div className={cn('container', className)}>
       { children }
     </div>
   )

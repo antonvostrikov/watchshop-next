@@ -4,7 +4,7 @@ import React from 'react'
 import Link from 'next/link'
 import styles from './Header.module.scss'
 import Container from '../Container/Container'
-import { User, ShoppingCart, ChevronDown, Search } from 'lucide-react'
+import { User, ShoppingCart, ChevronDown, Search, MapPin } from 'lucide-react'
 
 const menu = [
   { id: 1, title: 'Наручные часы' },
@@ -23,31 +23,17 @@ const location = [
   { id: 5, location: 'Сочи' },
 ]
 
-const Header:React.FC = () => {
-  const [mainLocation, setMainLocation] = React.useState({ id: 1, location: 'Москва' })
-
-  const locationHandler = (id: number, location: string) => {
-    setMainLocation({ id: id, location: location })
-  }
-  console.log(mainLocation);
-  
+const Header:React.FC = () => {  
   return (
     <header className={styles.header}>
       <div className={styles.headerTop}>
+        <Link href="#" className={styles.location}><MapPin /> Москва</Link>
         <span>8 (800) 000-00-00</span>
         <span>+7 (495) 000-00-00</span>
         <Link href="#">Заказать звонок</Link>
       </div>
 
-      <Container classNames={styles.headerMiddle}>
-        <div className={styles.headerLocation}>
-          <span>{mainLocation.location} <ChevronDown /></span>
-          <div className={styles.locationHidden}>
-            <ul>
-              { location.map(loc => <li key={loc.id} onClick={() => locationHandler(loc.id, loc.location)}>{loc.location}</li>) }
-            </ul>
-          </div>
-        </div>
+      <Container className={styles.headerMiddle}>
         <div className={styles.headerTitle}>
           <h1>Watchshop</h1>
         </div>
@@ -57,7 +43,7 @@ const Header:React.FC = () => {
         </div>
       </Container>
 
-      <Container classNames={styles.headerBottom}>
+      <Container className={styles.headerBottom}>
         <div className={styles.headerSearch}>
           <form>
             <input type="text" placeholder="Поиск" />
