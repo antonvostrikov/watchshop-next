@@ -1,7 +1,4 @@
 import styles from './Showcase.module.scss'
-import smartWatch from '../../../public/images/smart-watch.jpg'
-import rolex from '../../../public/images/rolex.jpg'
-import casio from '../../../public/images/casio.jpg'
 import Image from 'next/image'
 import Container from '../Container/Container'
 
@@ -17,13 +14,13 @@ const Showcase: React.FC<IShowcase> = ({ pictureBig, pictureTop, pictureBottom }
     <section className={styles.sectionShowcase}>
       <Container className={styles.showcaseWrapper}>
         <div className={styles.pictureMain}>
-          <Image src={pictureBig} alt="smart-watch" />
+          <Image src={pictureBig} width={0} height={0} sizes="100vw" alt="smart-watch" />
         </div>
         <div className={styles.pictureTop}>
-          <Image src={pictureTop} alt="rolex" />
+          <Image src={pictureTop} width={0} height={0} sizes="100vw" alt="rolex" />
         </div>
         <div className={styles.pictureBottom}>
-          <Image src={pictureBottom} alt="casio" />
+          <Image src={pictureBottom} width={0} height={0} sizes="100vw" alt="casio" />
         </div>
       </Container>
     </section>
