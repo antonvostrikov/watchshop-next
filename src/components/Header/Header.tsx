@@ -4,7 +4,8 @@ import React from 'react'
 import Link from 'next/link'
 import styles from './Header.module.scss'
 import Container from '../Container/Container'
-import { User, ShoppingCart, ChevronDown, Search, MapPin } from 'lucide-react'
+import { User, ShoppingCart, Search, MapPin } from 'lucide-react'
+import Location from '../Location/Location'
 
 const menu = [
   { id: 1, title: 'Наручные часы' },
@@ -15,22 +16,23 @@ const menu = [
   { id: 6, title: 'Бренды' },
 ]
 
-const location = [
-  { id: 1, location: 'Москва' },
-  { id: 2, location: 'Санкт-Петербург' },
-  { id: 3, location: 'Ростов' },
-  { id: 4, location: 'Владивосток' },
-  { id: 5, location: 'Сочи' },
-]
+interface ILocationActive {
+  id: number
+  location: string
+}
 
 const Header:React.FC = () => {  
+  const [locationIs, setLocationIs] = React.useState(false)
+  const [locationActive, setLocationActive] = React.useState<ILocationActive>({ id: 1, location: 'Москва' })
+
   return (
     <header className={styles.header}>
+      { locationIs && <Location setLocationIs={setLocationIs} /> }
       <div className={styles.headerTop}>
-        <Link href="#" className={styles.location}><MapPin /> Москва</Link>
+        <span onClick={() => setLocationIs(!locationIs)} className={styles.location}><MapPin /> {locationActive.location}</span>
         <span>8 (800) 000-00-00</span>
         <span>+7 (495) 000-00-00</span>
-        <Link href="#">Заказать звонок</Link>
+        <span className={styles.call}>Заказать звонок</span>
       </div>
 
       <Container className={styles.headerMiddle}>
