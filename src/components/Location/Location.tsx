@@ -1,11 +1,8 @@
-import { X } from "lucide-react"
-
+import Modal from '../Modal/Modal'
 import styles from './Location.module.scss'
 
-import cn from "classnames"
-
 interface ILocationProps {
-	setLocationIs: (a: boolean) => void
+	setLocationIs: (locationIs: boolean) => void
 }
 
 const location = [
@@ -17,26 +14,23 @@ const location = [
 ]
 
 const Location:React.FC<ILocationProps> = ({ setLocationIs }) => {
+
+	const closeModal = () => {
+		setLocationIs(false)
+	}
+
 	const locationHandler = () => {
 		setLocationIs(false)
 	}
 
 	return (
-		<div className={cn(styles.locationWrapper, 'active')} onClick={() => setLocationIs(false)}>
-			<div className={styles.location} onClick={(e) => e.stopPropagation()}>
-				<div className={styles.locationClose}>
-					<span onClick={() => setLocationIs(false)}><X /></span>
-				</div>
-				<div className={styles.locationTitle}>
-					<h2>Выберите город</h2>
-				</div>
-				<div className={styles.locationList}>
-					<ul>
-						{ location.map((loc) => <li key={loc.id} onClick={locationHandler}>{loc.location}</li>) }
-					</ul>
-				</div>
+		<Modal title="Выберите город" closeModal={closeModal}>
+			<div className={styles.locationList}>
+				<ul>
+					{ location.map(loc => <li key={loc.id} onClick={locationHandler}>{ loc.location }</li>) }
+				</ul>
 			</div>
-		</div>
+		</Modal>
 	)
 }
 

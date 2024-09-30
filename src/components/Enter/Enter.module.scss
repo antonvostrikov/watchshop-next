@@ -1,0 +1,38 @@
+.enter {
+  margin: 0 0 40px 0;
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    input {
+      border: 2px solid #8d8d8d;
+      width: 300px;
+      height: 50px;
+      padding: 0 10px;
+      outline: none;
+      border-radius: 5px;
+      font-size: 16px;
+      font-family: var(--font-roboto);
+      font-weight: 400;
+      &::placeholder {
+        font-size: 16px;
+        font-family: var(--font-roboto);
+        font-weight: 400;
+      }
+    }
+    button {
+      width: 300px;
+      height: 50px;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      background: #8d8d8d;
+      color: #fff;
+      font-size: 16px;
+      font-family: var(--font-roboto);
+      font-weight: 400;
+      cursor: pointer;
+      margin-top: 10px
+    }
+  }
+}

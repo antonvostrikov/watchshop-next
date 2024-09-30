@@ -1,4 +1,10 @@
-import { Open_Sans, Raleway, Roboto } from 'next/font/google'
+import { Open_Sans, Raleway, Roboto, Roboto_Condensed } from 'next/font/google'
+
+export const roboto_cond = Roboto_Condensed({
+  subsets: ['latin'],
+  variable: '--font-roboto-condensed',
+  weight: ['300']
+})
 
 export const open_sans = Open_Sans({
   subsets: ['latin'],
@@ -15,5 +21,6 @@ export const raleway = Raleway({
 export const roboto = Roboto({
   subsets: ['latin'],
   variable: '--font-roboto',
-  weight: ['500']
+  weight: ['300','400', '500']
 })
+

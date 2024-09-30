@@ -6,6 +6,7 @@ import styles from './Header.module.scss'
 import Container from '../Container/Container'
 import { User, ShoppingCart, Search, MapPin } from 'lucide-react'
 import Location from '../Location/Location'
+import Enter from '../Enter/Enter'
 
 const menu = [
   { id: 1, title: 'Наручные часы' },
@@ -23,11 +24,14 @@ interface ILocationActive {
 
 const Header:React.FC = () => {  
   const [locationIs, setLocationIs] = React.useState(false)
+  const [enterIs, setEnterIs] = React.useState(false)
   const [locationActive, setLocationActive] = React.useState<ILocationActive>({ id: 1, location: 'Москва' })
 
   return (
     <header className={styles.header}>
       { locationIs && <Location setLocationIs={setLocationIs} /> }
+      { enterIs && <Enter setEnterIs={setEnterIs}/> }
+      
       <div className={styles.headerTop}>
         <span onClick={() => setLocationIs(!locationIs)} className={styles.location}><MapPin /> {locationActive.location}</span>
         <span>8 (800) 000-00-00</span>
@@ -40,7 +44,7 @@ const Header:React.FC = () => {
           <h1>Watchshop</h1>
         </div>
         <div className={styles.headerButtons}>
-          <span><User /> Вход</span>
+          <span onClick={() => setEnterIs(!enterIs)}><User /> Вход</span>
           <span><ShoppingCart /> Корзина</span>
         </div>
       </Container>
