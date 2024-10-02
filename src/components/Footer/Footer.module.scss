@@ -1,0 +1,39 @@
+.footerBottom {
+  background: #f1f1f1;
+  padding: 70px 0 0 0;
+  .footerWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    .footerBlock {
+      margin: 0 0 100px 0;
+      h4 {
+        font-family: var(--font-raleway);
+        font-weight: 500;
+        font-size: 18px;
+        margin: 0 0 30px 0;
+      }
+      .listSocial {
+        display: flex;
+        gap: 15px;
+        li {
+          svg {
+            width: 35px;
+            height: 35px;
+          }
+        }
+      }
+      ul {
+        list-style: none;
+        li {
+          line-height: 40px;
+          a {
+            font-family: var(--font-raleway);
+            font-size: 16px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}

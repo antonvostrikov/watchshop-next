@@ -1,14 +1,15 @@
+import styles from './Tiles.module.scss'
+
 interface ITileProps {
-  className?: string
   image?: React.ReactNode
   title?: string
 }
 
-const Tile:React.FC<ITileProps> = ({ className, image, title }) => {
+const Tile:React.FC<ITileProps> = ({ image, title }) => {
   return (
-    <div className={className}>
+    <div className={styles.tile}>
       {image}
-      {title}
+      <span>{title}</span>
     </div>
   )
 }

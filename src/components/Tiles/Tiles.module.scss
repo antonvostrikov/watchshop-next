@@ -9,11 +9,25 @@
     gap: 28px;
     .tile {
       display: flex;
-      background: #F8F8F8;
+      background: #f1f1f1;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
+      svg {
+        width: 70px;
+        height: 70px;
+      }
+      span {
+        font-family: var(--font-open-sans);
+        font-size: 18px;
+        margin: 10px 0 0 0;
+      }
     }
-    .tile:nth-child(1) {
+    .tileMain {
+      display: flex;
+      background: #f1f1f1;
+      flex-direction: column;
+      justify-content: center;
       grid-area: A;
       padding: 0 45px;
       height: 560px;
