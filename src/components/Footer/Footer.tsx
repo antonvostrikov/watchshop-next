@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react'
+import { ChevronDown, Facebook, Instagram, Twitter, Youtube } from 'lucide-react'
 import Container from '../Container/Container'
 import styles from './Footer.module.scss'
 
@@ -65,6 +65,19 @@ const Footer:React.FC = () => {
         </div>
         <div className={styles.footerBlock}>
           <h4>Свяжитесь с нами</h4>
+          <div className={styles.footerBlockPhone}>
+            <span>8 (800) 000-00-00</span>
+            <span>Бесплатный звонок по РФ</span>
+          </div>
+          <div className={styles.footerBlockToggle}>
+            <span>Москва <ChevronDown /></span>
+            <span>+ 7 (495) 000-00-00</span>
+          </div>
+          <div className={styles.footerBlockQuestion}>
+            <span>Часы работы</span>
+            <span>10:00 - 20:00</span>
+            <button>Задать вопрос</button>
+          </div>
         </div>
         <div className={styles.footerBlock}>
           <h4>Мы в социальных сетях</h4>
@@ -76,6 +89,11 @@ const Footer:React.FC = () => {
           </ul>
         </div>
       </Container>
+      <div className={styles.footerCopyright}>
+        <Container>
+          <p>© WatchShop 2010 - 2020</p>
+        </Container>
+      </div>
     </footer>
   )
 }

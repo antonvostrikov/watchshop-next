@@ -9,12 +9,12 @@ import Location from '../Location/Location'
 import Enter from '../Enter/Enter'
 
 const menu = [
-  { id: 1, title: 'Наручные часы' },
-  { id: 2, title: 'Интерьерные' },
-  { id: 3, title: 'Rolex' },
-  { id: 4, title: 'Casio' },
-  { id: 5, title: 'Аксессуары' },
-  { id: 6, title: 'Бренды' },
+  { id: 1, title: 'Наручные часы', link: '/watch' },
+  { id: 2, title: 'Интерьерные', link: '/watch/premium' },
+  { id: 3, title: 'Rolex', link: '/watch/rolex' },
+  { id: 4, title: 'Casio', link: 'watch/casio' },
+  { id: 5, title: 'Аксессуары', link: '/accessories' },
+  { id: 6, title: 'Бренды', link: '/brands' },
 ]
 
 interface ILocationActive {
@@ -33,15 +33,17 @@ const Header:React.FC = () => {
       { enterIs && <Enter setEnterIs={setEnterIs}/> }
       
       <div className={styles.headerTop}>
-        <span onClick={() => setLocationIs(!locationIs)} className={styles.location}><MapPin /> {locationActive.location}</span>
-        <span>8 (800) 000-00-00</span>
-        <span>+7 (495) 000-00-00</span>
-        <span className={styles.call}>Заказать звонок</span>
+        <Container className={styles.headerTopWrapper}>
+          <span onClick={() => setLocationIs(!locationIs)} className={styles.location}><MapPin /> {locationActive.location}</span>
+          <span>8 (800) 000-00-00</span>
+          <span>+7 (495) 000-00-00</span>
+          <span className={styles.call}>Заказать звонок</span>
+        </Container>
       </div>
 
       <Container className={styles.headerMiddle}>
         <div className={styles.headerTitle}>
-          <h1>Watchshop</h1>
+          <h1><Link href="/">Watchshop</Link></h1>
         </div>
         <div className={styles.headerButtons}>
           <span onClick={() => setEnterIs(!enterIs)}><User /> Вход</span>
@@ -59,7 +61,7 @@ const Header:React.FC = () => {
         <div className={styles.headerMenu}>
           <nav>
             <ul>
-              { menu.map(m => <li key={m.id}><Link href="#">{m.title}</Link></li>) } 
+              { menu.map(m => <li key={m.id}><Link href={m.link}>{m.title}</Link></li>) } 
             </ul>
           </nav>
         </div>

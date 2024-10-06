@@ -27,6 +27,7 @@
         list-style: none;
         li {
           line-height: 40px;
+          cursor: pointer;
           a {
             font-family: var(--font-raleway);
             font-size: 16px;
@@ -34,6 +35,64 @@
           }
         }
       }
+      .footerBlockPhone {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 30px 0;
+        span {
+          font-family: var(--font-open-sans);
+          font-size: 16px;
+          &:last-child {
+            font-size: 14px;
+            margin: 5px 0 0 0;
+          }
+        }
+      }
+      .footerBlockToggle {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 30px 0;
+        span {
+          display: flex;
+          align-items: center;
+          font-family: var(--font-open-sans);
+          font-size: 16px;
+          cursor: pointer;
+          &:last-child {
+            margin: 5px 0 0 0;
+          }
+        }
+      }
+      .footerBlockQuestion {
+        display: flex;
+        flex-direction: column;
+        span {
+          font-family: var(--font-open-sans);
+          font-size: 16px;
+          margin: 0 0 5px 0;
+        }
+        button {
+          background: #333;
+          font-size: 16px;
+          font-family: var(--font-raleway);
+          border: none;
+          outline: none;
+          padding: 10px 5px;
+          color: #fff;
+          margin: 20px 0 0 0;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .footerCopyright {
+    display: flex;
+    justify-content: center;
+    padding: 25px 0;
+    border-top: 1px solid #000;
+    p {
+      font-family: var(--font-raleway);
+      font-size: 16px;
     }
   }
 }
