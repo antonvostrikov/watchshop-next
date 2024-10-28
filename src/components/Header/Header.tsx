@@ -47,7 +47,7 @@ const Header:React.FC = () => {
         </div>
         <div className={styles.headerButtons}>
           <span onClick={() => setEnterIs(!enterIs)}><User /> Вход</span>
-          <span><ShoppingCart /> Корзина</span>
+          <Link href="/cart"><span><ShoppingCart /> Корзина</span></Link>
         </div>
       </Container>
 

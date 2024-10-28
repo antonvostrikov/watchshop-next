@@ -1,0 +1,13 @@
+.sectionCart {
+  padding: 110px 0;
+  .cartEmpty {
+    h2 {
+      font-family: var(--font-raleway);
+      font-size: 30px;
+    }
+    p {
+      font-family: var(--font-roboto);
+      margin: 20px 0 0 0;
+    }
+  }
+}
