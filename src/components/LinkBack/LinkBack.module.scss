@@ -1,0 +1,10 @@
+.linkBack {
+  padding: 40px 0;
+  span {
+    display: flex;
+    align-items: center;
+    font-family: var(--font-roboto-condensed);
+    font-size: 18px;
+    cursor: pointer;
+  }
+}

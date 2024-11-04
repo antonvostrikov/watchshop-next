@@ -1,0 +1,15 @@
+.locationList {
+	ul {
+		list-style: none;
+		li {
+			font-family: var(--font-raleway);
+			padding: 10px 10px;
+			font-size: 18px;
+			cursor: pointer;
+			&:hover {
+				background: #e6e6e6;
+				transition: .2s ease-in-out;
+			}
+		}
+	}
+}

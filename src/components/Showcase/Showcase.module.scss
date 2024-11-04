@@ -1,0 +1,41 @@
+.sectionShowcase {
+  margin: 60px 0 60px 0;
+  .showcaseWrapper {
+    display: grid;
+    grid-template-areas: 
+      "A B"
+      "A C"
+    ;
+    grid-column-gap: 28px;
+    grid-row-gap: 28px;
+    grid-template-columns: calc(50% - 15px) calc(50% - 15px);
+    grid-template-rows: calc(50% - 15px) 50%;
+  }
+  .pictureMain {
+    grid-area: A;
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: 701px;
+      box-shadow: 0px 0px 20px 3px rgba(34, 60, 80, 0.2);
+    }
+  }
+  .pictureTop {
+    grid-area: B;
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: 335px;
+      box-shadow: 0px 0px 20px 3px rgba(34, 60, 80, 0.2);
+    }
+  }
+  .pictureBottom {
+    grid-area: C;
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: 335px;
+      box-shadow: 0px 0px 20px 3px rgba(34, 60, 80, 0.2);
+    }
+  }
+}

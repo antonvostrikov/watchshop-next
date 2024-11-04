@@ -1,0 +1,54 @@
+:root {
+  --grey: #F8F8F8;
+  --black: #F0F0F0;
+  --white: #FFFFFF;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container-standart {
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 1800px;
+}
+
+.container-footer {
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.container-watches {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 110px 15px;
+}
+
+.container-product {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 110px 15px;
+}
