@@ -1,4 +1,4 @@
-.wrapperModal {
+.modalWrapper {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -13,35 +13,30 @@
   transform: scale(1);
   z-index: 100;
   padding: 0 20px;
-  .modal {
-    max-width: 500px;
-    width: 100%;
-    position: relative;
+  .modalWindow {
     background: #fff;
-    padding: 30px;
+    padding: 10px;
     border-radius: 5px;
-  }
-  .modalClose {
     display: flex;
-		justify-content: flex-end;
-		span {
-			cursor: pointer;
-      svg { 
-        color: #a5a5a5;
-      }
-      &:hover{
-        svg {
-          color: #333;
-          transition: .4s ease-in-out;
-        }
+    flex-direction: column;
+    align-items: center;
+    .modalWindowHeader {
+      display: flex;
+      justify-content: end;
+      width: 100%;
+      span {
+        cursor: pointer;
       }
     }
-  }
-  .modalTitle {
-    padding: 20px 0 40px 0;
-    text-align: center;
-		h2 {
-			font-family: var(--font-open-sans);
-		}
+    .modalWindowBody {
+      width: 100%;
+      .modalWindowTitle {
+        padding: 20px 0;
+        text-align: center;
+        font-family: var(--font-roboto);
+        font-weight: 400;
+        font-size: 22px;
+      }
+    }
   }
 }

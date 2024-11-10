@@ -1,26 +1,25 @@
-import { X } from 'lucide-react'
+import React from 'react'
 import styles from './Modal.module.scss'
+import ModalWindow from './ModalWindow'
+import ModalWindowHeader from './ModalWindowHeader'
+import ModalWindowBody from './ModalWindowBody'
 
 interface IModalProps {
-  children?: React.ReactNode
+  children: React.ReactNode,
+  width?: string,
   title?: string
   closeModal: () => void
 }
 
-const Modal:React.FC<IModalProps> = ({ children, title, closeModal }) => {
+const Modal:React.FC<IModalProps> = ({ children, width='500px', title, closeModal }) => {
   return (
-    <div className={styles.wrapperModal} onClick={closeModal}>
-      <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
-        <div className={styles.modalClose}>
-          <span onClick={closeModal}><X /></span>
-        </div>
-        <div className={styles.modalTitle}>
-          <h2>{title}</h2>
-        </div>
-        <div className={styles.modalContent}>
-          {children}
-        </div>
-      </div>
+    <div className={styles.modalWrapper} onClick={closeModal}>
+      <ModalWindow width={width}>
+        <ModalWindowHeader closeModal={closeModal} />
+        <ModalWindowBody title={title}>
+          { children }
+        </ModalWindowBody>
+      </ModalWindow> 
     </div>
   )
 }

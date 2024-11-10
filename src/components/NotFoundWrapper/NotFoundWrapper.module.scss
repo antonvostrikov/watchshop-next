@@ -1,0 +1,25 @@
+.notFoundWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 110px 0;
+  h4 {
+    font-family: var(--font-raleway);
+    font-weight: 300;
+    font-size: 22px;
+    margin: 0 0 20px 0;
+  }
+  h2 {
+    font-family: var(--font-roboto);
+    font-weight: 500;
+    font-size: 44px;
+    margin: 0 0 20px 0;
+  }
+  p {
+    text-align: center;
+    font-family: var(--font-roboto-condensed);
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin: 0 0 40px 0;
+  }
+}

@@ -14,7 +14,6 @@ const location = [
 ]
 
 const Location:React.FC<ILocationProps> = ({ setLocationIs }) => {
-
 	const closeModal = () => {
 		setLocationIs(false)
 	}

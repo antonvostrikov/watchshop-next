@@ -19,6 +19,10 @@ const ProductDescription:React.FC = () => {
             <dd>Casio EFR-526L-1A</dd>
             <dt>Страна</dt>
             <dd>Япония</dd>
+            <dt>Бренд</dt>
+            <dd>Casio</dd>
+            <dt>Стиль</dt>
+            <dd>Спортивные</dd>
             <dt>Тип механизма</dt>
             <dd>кварцевый</dd>
             <dt>Корпус</dt>

@@ -4,9 +4,10 @@ import React from 'react'
 import Link from 'next/link'
 import styles from './Header.module.scss'
 import Container from '../Container/Container'
-import { User, ShoppingCart, Search, MapPin, Heart } from 'lucide-react'
+import { User, ShoppingCart, MapPin, Heart } from 'lucide-react'
 import Location from '../Location/Location'
 import Enter from '../Enter/Enter'
+import Search from '../Search/Search'
 
 const menu = [
   { id: 1, title: 'Наручные часы', link: '/watch' },
@@ -54,10 +55,7 @@ const Header:React.FC = () => {
 
       <Container className={styles.headerBottom}>
         <div className={styles.headerSearch}>
-          <form>
-            <input type="text" placeholder="Поиск" />
-            <Search />
-          </form>
+          <Search />
         </div>
         <div className={styles.headerMenu}>
           <nav>
