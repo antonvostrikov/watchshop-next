@@ -1,0 +1,74 @@
+.filter {
+  position: relative;
+  margin: 0 70px 0 0;
+  .filterTitle {
+    span {
+      display: inline-block;
+      padding: 0 0 20px 0;
+      font-family: var(--font-roboto);
+      font-weight: 100;
+      font-size: 18px;
+      text-transform: uppercase;
+      font-weight: 400;
+      letter-spacing: 2px;
+      &:hover {
+        cursor: pointer;
+        border-bottom: 3px solid #bbb;
+      }
+    }
+    .filterTitleActive {
+      border-bottom: 3px solid #333;
+      &:hover {
+        border-bottom: 3px solid #333;
+      }
+    }
+  }
+  .filterList {
+    position: absolute;
+    border: 1px solid #bbbbbb;
+    padding: 10px 20px;
+    top: 45px;
+    background: #fff;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        font-family: var(--font-roboto);
+        font-size: 16px;
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+        font-weight: 300;
+        input {
+          margin: 0 10px 0 0;
+          width: 16px;
+          height: 16px;
+          border: 1px solid #bbbbbb;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    form {
+      display: flex;
+      align-items: center;
+      span {
+        margin: 0 20px 0 0;
+        font-family: var(--font-open-sans);
+      }
+      input {
+        height: 35px;
+        width: 150px;
+        font-size: 14px;
+        outline: none;
+        padding: 0 5px;
+        font-family: var(--font-open-sans);
+      }
+      #inputFrom {
+        margin: 0 20px 0 0;
+      }
+    }
+  }
+}

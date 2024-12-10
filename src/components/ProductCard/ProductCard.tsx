@@ -10,7 +10,7 @@ interface IProductCardProps {
   priceSize?: string
 }
 
-const ProductCard:React.FC<IProductCardProps> = ({ imageWidth=300, imageHeight=400, titleSize="20px", priceSize="20px" }) => {
+const ProductCard:React.FC<IProductCardProps> = ({ imageWidth=200, imageHeight=300, titleSize="18px", priceSize="18px" }) => {
   return (
     <div className={styles.productCard}>
       <div className={styles.productCardImage}>

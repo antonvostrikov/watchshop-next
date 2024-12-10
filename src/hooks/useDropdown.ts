@@ -2,27 +2,26 @@ import React from 'react'
 
 const useDropdown = () => {
   const dropdownRef = React.useRef<HTMLDivElement>(null)
-  const [dropdownIs, setDropdownIs] = React.useState(false)
+  const [dropdown, setDropdown] = React.useState(false)
 
   React.useEffect(() => {
     const dropdownHandler = (e: MouseEvent) => {
-      if (dropdownIs && dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
-        setDropdownIs(false)
-        console.log('close')
-      }
-
-      document.addEventListener('mousedown', dropdownHandler)
-
-      return () => {
-        document.removeEventListener('mousedown', dropdownHandler)
+      if (dropdownRef && dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setDropdown(false)
       }
     }
-  }, [dropdownIs])
+
+    document.addEventListener('mousedown', dropdownHandler)
+
+    return () => {
+      document.removeEventListener('mousedown', dropdownHandler)
+    }  
+  }, [])
 
   return {
     dropdownRef,
-    dropdownIs,
-    setDropdownIs
+    dropdown,
+    setDropdown
   }
 }
 
