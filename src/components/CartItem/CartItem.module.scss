@@ -1,54 +1,77 @@
 .cartItem {
   display: flex;
   flex-direction: row;
+  padding: 30px 40px;
   justify-content: space-between;
-  margin: 0 0 55px 0;
   .cartItemImage {
     img {
       object-fit: contain;
+      width: 110px;
+      height: 200px;
     }
   }
   .cartItemTitle {
-    padding: 20px 0 0 0;
     h3 {
-      font-family: var(--font-roboto);
-      font-weight: 400;
+      font-family: var(--font-open-sans);
+      font-size: 16px;
+      font-weight: 100;
+      padding: 15px 0 0 0;
     }
-  }
+  } 
   .cartItemCount {
-    .countTitle {
-      font-family: var(--font-roboto);
+    span {
+      display: block;
+      margin: 0 0 10px 0;
+      font-family: var(--font-open-sans);
+      font-size: 14px;
+      font-weight: 100;
+      color: #aaa;
     }
-    .itemCount {
+    .itemsCount {
       display: flex;
-      margin: 15px 0 0 0;
       align-items: center;
-      span {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 30px;
-        height: 30px;
-        text-align: center;
+      svg {
+        width: 20px;
+        height: 20px;
+        padding: 3px;
         cursor: pointer;
-        font-family: var(--font-roboto);
-        svg {
-          width: 20px;
+        &:hover {
+          background: #000;
+          border-radius: 50%;
+          color: #fff;
+          transition: .3s;
         }
+      }
+      span {
+        font-size: 16px;
+        padding: 0 10px;
+        color: black;
+        font-family: var(--font-open-sans);
+        margin: 0;
       }
     }
   }
   .cartItemTotal {
-    display: flex;
-    flex-direction: column;
     span {
-      font-family: var(--font-roboto);
-      margin: 0 0 15px 0;
+      display: block;
+      font-family: var(--font-open-sans);
+      font-size: 14px;
+      font-weight: 100;
+      color: #aaa;
+      margin: 0 0 10px 0;
+    }
+    .total {
+      font-family: var(--font-open-sans);
     }
   }
   .cartItemClose {
-    span {
-      cursor: pointer
+    svg {
+      color: #aaa;
+      cursor: pointer;
+      &:hover {
+        transition: .3s;
+        color: black;
+      }
     }
   }
 }

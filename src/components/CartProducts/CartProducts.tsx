@@ -1,16 +1,23 @@
 'use client'
 
 import { useRouter } from "next/navigation"
-import CartItem from "../CartItem/CartItem"
 import styles from './CartProducts.module.scss'
+import CartItem from "../CartItem/CartItem"
 
 const CartProducts:React.FC = () => {
   const router = useRouter()
 
   return (
-    <div className={styles.cartProducts}>
-    
-    </div>
+    <>
+      <div className={styles.cartProductsTitle}>
+        <h2>Корзина</h2>
+        <span onClick={() => router.back()}>Назад к покупкам</span>
+      </div>
+      <div className={styles.cartProducts}>
+        <CartItem />
+        <CartItem />
+      </div>
+    </>
   )
 }
 
