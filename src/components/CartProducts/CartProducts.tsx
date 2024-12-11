@@ -16,6 +16,7 @@ const CartProducts:React.FC = () => {
       <div className={styles.cartProducts}>
         <CartItem />
         <CartItem />
+        <CartItem />
       </div>
     </>
   )

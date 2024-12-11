@@ -4,6 +4,7 @@
   padding: 30px 40px;
   justify-content: space-between;
   .cartItemImage {
+    width: 20%;
     img {
       object-fit: contain;
       width: 110px;
@@ -11,6 +12,7 @@
     }
   }
   .cartItemTitle {
+    width: 45%;
     h3 {
       font-family: var(--font-open-sans);
       font-size: 16px;
@@ -19,6 +21,7 @@
     }
   } 
   .cartItemCount {
+    width: 15%;
     span {
       display: block;
       margin: 0 0 10px 0;
@@ -52,6 +55,7 @@
     }
   }
   .cartItemTotal {
+    width: 15%;
     span {
       display: block;
       font-family: var(--font-open-sans);
@@ -65,6 +69,7 @@
     }
   }
   .cartItemClose {
+    width: 5%;
     svg {
       color: #aaa;
       cursor: pointer;
