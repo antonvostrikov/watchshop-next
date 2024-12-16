@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation"
 import styles from './CartProducts.module.scss'
 import CartItem from "../CartItem/CartItem"
+import CartPayment from "../CartPayment/CartPayment"
 
 const CartProducts:React.FC = () => {
   const router = useRouter()
@@ -18,6 +19,7 @@ const CartProducts:React.FC = () => {
         <CartItem />
         <CartItem />
       </div>
+      <CartPayment />
     </>
   )
 }

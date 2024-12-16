@@ -1,0 +1,129 @@
+.cartPayment {
+  margin: 30px 0 0 0;
+  padding: 40px;
+  background: #fff;
+  .paymentContacts {
+    margin: 0 0 60px 0;
+    h2 {
+      font-size: 18px;
+      font-family: var(--font-open-sans);
+      font-weight: 100;
+      margin: 0 0 20px 0;
+    }
+    .paymentForm {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 0 10px 0;
+      .paymentFormBlock {
+        width: 30%;
+        label {
+          display: block;
+          font-family: var(--font-raleway);
+          font-size: 14px;
+          margin: 0 0 10px 0;
+        }
+        input {
+          width: 100%;
+          height: 35px;
+          padding: 0 5px;
+          outline: none;
+          border: 1px solid #bbb;
+        }
+      }
+    }
+    .paymentFormEmail {
+      display: flex;
+      align-items: center;
+      input {
+        margin: 0 10px 0 0;
+        width: 15px;
+        height: 15px;
+        accent-color: #333;
+        &:hover {
+          accent-color: #bbb;
+          transition: .5s;
+        }
+      }
+      p {
+        font-family: var(--font-raleway);
+        font-size: 14px;
+      }
+    }
+  }
+  .paymentDelivery {
+    margin: 0 0 60px 0;
+    h2 {
+      font-family: var(--font-open-sans);
+      font-size: 18px;
+      font-weight: 100;
+      margin: 0 0 20px 0;
+    }
+    .paymentCountry {
+      label {
+        display: block;
+        font-family: var(--font-raleway);
+        font-size: 14px;
+        margin: 0 0 10px 0;
+      }
+      input {
+        height: 35px;
+        padding: 0 5px;
+        outline: none;
+        border: 1px solid #bbb;
+        width: 40%;
+      }
+    }
+  }
+  .paymentMain {
+    h2 {
+      font-family: var(--font-open-sans);
+      font-size: 18px;
+      font-weight: 100;
+      margin: 0 0 20px 0;
+    }
+    .paymentWrapper {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 0 60px 0;
+      .paymentBlock {
+        margin: 0 20px 10px 0;
+        input {
+          margin: 0 10px 0 0;
+          accent-color: #333;
+        }
+        span {
+          font-family: var(--font-raleway);
+        }
+      }
+    }
+    button {
+      background: #333;
+      color: #fff;
+      border: none;
+      font-size: 16px;
+      font-family: var(--font-open-sans);
+      font-weight: 100;
+      height: 80px;
+      width: 300px;
+      margin: 0 0 20px 0;
+      cursor: pointer;
+      &:hover {
+        background: #bbb;
+        transition: .5s;
+      }
+    }
+    p {
+      max-width: 400px;
+      font-size: 14px;
+      font-family: var(--font-raleway);
+      u {
+        cursor: pointer;
+        &:hover {
+          color: #bbb;
+          text-decoration: underline;
+          transition: .5s;
+        }
+      }
+    }
+  }
+}
